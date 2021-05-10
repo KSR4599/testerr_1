@@ -1,21 +1,9 @@
-sudo: required
-jobs:
-  include:
-    - os: linux
-      language: node_js
-      node_js:
-        - "6.16"
+sudo: false
 
-    - os: windows
-      language: node_js
-      node_js:
-        - "8.11.3"
+language: node_js
 
-    - os: osx
-      language: node_js
-      node_js:
-        - "6.16"
-
+node_js:
+  - node
 
 before_install:
   - npm i
@@ -23,7 +11,3 @@ before_install:
 script:
   - npm test
 
-# Trigger build only for these branches
-branches:
-  only:
-  - master

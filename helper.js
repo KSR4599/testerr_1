@@ -14,7 +14,7 @@ function calculate_BMI(BMI_value) {
 	}
 	else if (BMI_value >= 30 && BMI_value <= 34.9) {
 		res.push("Moderately Obese");
-		res.push("Medium Risk");
+		res.push("Medium Risk ");
 	}
 	else if (BMI_value >= 35 && BMI_value <= 39.9) {
 		res.push("Severely Obese");

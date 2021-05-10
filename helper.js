@@ -6,7 +6,7 @@ function calculate_BMI(BMI_value) {
 	}
 	else if (BMI_value >= 18.5 && BMI_value <= 24.9) {
 		res.push("Normal Weight");
-		res.push("Low Risk");
+		res.push("Low Riskn  ");
 	}
 	else if (BMI_value >= 25 && BMI_value <= 29.9) {
 		res.push("Overweight");

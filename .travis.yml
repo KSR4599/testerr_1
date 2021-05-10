@@ -1,25 +1,30 @@
-# sudo: required
-# jobs:
-#   include:
-#     - os: linux
-#       language: node_js
-#       node_js:
-#         - "14.16.1"
-#     - os: windows
-#       language: node_js
-#       node_js:
-#         - "14.16.1"
-#     - os: osx
-#       language: node_js
-#       node_js:
-#         - "14.16.1"
+sudo: required
+jobs:
+  include:
+    - os: linux
+      language: node_js
+      node_js:
+        - "6.16"
 
-language: node_js
-node_js:
-  - "12"
+    - os: windows
+      language: node_js
+      node_js:
+        - "8.11.3"
+
+    - os: osx
+      language: node_js
+      node_js:
+        - "6.16"
+
 
 before_install:
   - npm i
 
 script:
-  - npm run test
+  - npm test
+
+# Trigger build only for these branches
+branches:
+  only:
+  - master
+
